@@ -1,7 +1,110 @@
-document.getElementById("startButton").addEventListener("click", () => {
-  window.open(
-    "https://smashkarts.io/",
-    "_blank",
-    "noopener,noreferrer"
-  );
-});
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smash Karts | Play Now</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      color: white;
+      background:
+        radial-gradient(circle at top, #254b88, transparent 50%),
+        linear-gradient(135deg, #080c20, #111b3b);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 650px;
+      width: 100%;
+      padding: 40px 24px;
+      background: rgba(12, 18, 43, 0.9);
+      border: 2px solid #38e8ff;
+      border-radius: 24px;
+      box-shadow: 0 0 35px #1478aa55;
+    }
+
+    .logo {
+      font-size: clamp(42px, 9vw, 76px);
+      margin: 0;
+      font-weight: 900;
+      font-style: italic;
+      color: #38e8ff;
+      text-shadow: 3px 3px 0 #7b36ff;
+    }
+
+    .subtitle {
+      color: #cbd5ff;
+      font-size: 18px;
+      margin: 15px 0 30px;
+    }
+
+    .kart {
+      font-size: 90px;
+      margin: 20px 0;
+    }
+
+    .play-button {
+      display: inline-block;
+      padding: 18px 48px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #081124;
+      background: #38e8ff;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .play-button:hover {
+      transform: scale(1.06);
+      background: #80f3ff;
+    }
+
+    .note {
+      margin-top: 25px;
+      font-size: 13px;
+      color: #aab7d8;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <h1 class="logo">SMASH KARTS</h1>
+
+    <p class="subtitle">
+      Ready to race? Jump into the action!
+    </p>
+
+    <div class="kart" aria-hidden="true">🏎️</div>
+
+    <a
+      class="play-button"
+      href="https://smashkarts.io/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      ▶ PLAY NOW
+    </a>
+
+    <p class="note">
+      Click Play Now to launch Smash Karts in a new tab.
+    </p>
+  </main>
+</body>
+</html>
